@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <input type="text" id = "num1">
+    <button onclick="calA()">tinh chu vi & dien tich</button>
+    <p id="result1"></p>
+    <hr>
+    <input type="text" id="num2">
+    <input type="text" id="num3">
+    <button onclick="calB()">tinh a^2 va b^2</button>
+    <p id = result2></p>
+    <hr>
+    <input type="text" id="num4">
+    <input type="text" id="num5">
+    <button onclick="calC()">tinh tong cac so tu a den b</button>
+    <p id = result3></p>
+    <hr>
+    <input type="text" id = "num6">
+    <button onclick="calD()">tim the ki</button>
+    <p id = result4></p>
+    <script>
+        function calA() {
+            let a = document.getElementById("num1").value;
+            document.getElementById("result1").innerHTML = "chu vi: " + (a * 4) + "," + "Dien tich: " + (a * a);
+        }
+        function calB() {
+            let a = document.getElementById("num2").value;
+            let b = document.getElementById("num3").value;
+            document.getElementById("result2").innerHTML = "a^2: " + (a * a) + ", " +"b^2: " + (b * b);
+        }
+        function calC() {
+            let a = document.getElementById("num4").value;
+            let b = document.getElementById("num5").value;
+            document.getElementById("result3").innerHTML = "Tong cac so tu a den b:" + ((a + b) * ((b - a) + 1) / 2);
+        }
+        function calD () {
+            let a = document.getElementById("num6").value;
+
+            if (a % 100 == 0) {
+                document.getElementById("result4").innerHTML = a/100
+            } else {
+                document.getElementById("result4").innerHTML = (a/100) +1
+            }
+        }
+    </script>
+</body>
+</html>
